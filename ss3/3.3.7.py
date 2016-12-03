@@ -12,3 +12,4 @@ if set(even_list) == set([2, -10, 6]):
 else:
     print("Ooops, bugs detected")
 
+input()
