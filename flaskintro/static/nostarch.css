@@ -1,0 +1,25 @@
+.ljust30 {
+    margin-left: 30px;
+}
+
+div.contact {
+    position: relative;
+    left: 300px;
+    top: 100px;
+    width: 600px;
+    height: 300px;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: 'Arial','Verdana','sans-serif';
+
+}
+
+a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+a:hover{
+    text-decoration: underline;
+}

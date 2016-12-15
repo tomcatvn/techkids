@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for object</title>
+    <link rel="stylesheet" href="../static/w3.css">
+</head>
+<body>
+<div class="w3-row w3-yellow" align="center" style="padding: 30px" >
+    {% for food in foodlist  %}
+       <div class="w3-third w3-container">
+        <h3 class="w3-text-red w3-black">{{ food["name"]}}</h3>
+        <p>{{ food["desc"]}}</p>
+        <img src={{ food["img"]}} height="300" width="300">
+       </div>
+
+
+    {% endfor %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+p.leftborder {
+    border-left-style: ridge;
+    border-left-width: 5px;
+}
