@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/w3.css">
+    <title>register</title>
+</head>
+<body>
+    <form class="w3-container w3-form" method="post" action="{{ url_for("register")   }}" style="width: 30%">
+        <div class="w3-container w3-padding w3-deep-purple">
+            <h3>register form</h3> </div>
+
+        <label for="email">Email </label><br>
+        <input type="text" name="email"><br>
+        <label for="password">Password   </label><br>
+        <input type="password" name="password"> <br>
+        <input type="submit" >
+
+    </form>
+</body>
+</html>

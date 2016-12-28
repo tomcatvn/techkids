@@ -1,6 +1,20 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,url_for,request
+import mongoengine
+from mongoengine import *
+#mongodb://<dbuser>:<dbpassword>@ds135798.mlab.com:35798/thanhku
 
+host = "ds135798.mlab.com"
+port = 35798
+user_name = "8f8f8f8"
+password = "123456"
+dbname = "thanhku"
+
+mongoengine.connect(dbname,host=host,port=port,username=user_name,password=password)
 app = Flask(__name__)
+class User(Document):
+    email = StringField()
+    password = StringField()
+
 
 
 @app.route('/intro')
@@ -63,6 +77,15 @@ def intro():
     ]
     return render_template('intro.html',phim=phim)
 
-
+@app.route('/register', methods=["GET","POST"])
+def register():
+    if request.method == "GET":
+        return render_template("register.html")
+    elif request.method == "POST":
+        email = request.form["email"]
+        password = request.form["password"]
+        user = User(email=email , password= password)
+        user.save()
+        return 'luu len mongodb roi nhe con'
 if __name__ == '__main__':
-    app.run()
+    app.run(port=9696)

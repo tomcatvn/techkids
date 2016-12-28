@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cung hoang dao</title>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <style>
+        #tinhcachp {
+            margin-left: 20px;
+            margin-right: 500px;
+        }
+        input {
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+<div style="padding:30px">
+<label>Ngày sinh </label> <input type="number" id="ngaysinh">
+<label style="padding-left: 15px">Tháng sinh </label><input type="number" id="thangsinh">
+<label style="padding-left: 15px">Năm sinh </label><input type="number">
+<button style="padding-left: 5px" onclick="cunghoangdao(document.getElementById('ngaysinh').value ,document.getElementById('thangsinh').value )">quat</button>
+<h2 style="padding-top: 30px" id="cung"></h2><br>
+<h3 id="tinhcachb"></h3><br>
+<p id="tinhcachp"></p><br>
+
+    </div>
+
+<script type='text/javascript' src="../static/cunghoangdao.js"></script>
+
+
+</body>
+</html>
