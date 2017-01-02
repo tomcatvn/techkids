@@ -23,10 +23,10 @@ function loadData(){
             //     ul.appendChild(li4);
 
 
-            }
+            }})}
 
 
-        }})}
+
 function addData(){
     var zodiacName = document.getElementById('zodiac-name').value;
     var zodiacIMG = document.getElementById('zodiac-img').value;
