@@ -21,6 +21,10 @@ def jsjs():
 def cunghoangdao():
     return render_template("cunghoangdao.html")
 
+@app.route('/ajax')
+@nocache
+def ajax():
+    return render_template('ajax.html')
 
 if __name__ == '__main__':
     app.run(port=2828)

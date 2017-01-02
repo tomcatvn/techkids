@@ -1,6 +1,7 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template, url_for
 from flask_restful import Api, Resource, reqparse
 from mongoengine import *
+from nocache import *
 import json
 
 parser = reqparse.RequestParser()
@@ -71,5 +72,11 @@ class HrcRes(Resource):
 
 api.add_resource(HrcListRes,"/api/hrc")
 api.add_resource(HrcRes,"/api/hrc/<hrc_id>")
+
+@app.route('/ajax')
+@nocache
+def ajax():
+    return render_template('ajax.html',zodiac= Zodiac.objects)
+
 if __name__ == '__main__':
     app.run()

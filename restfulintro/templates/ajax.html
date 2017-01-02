@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <style> ul li {display:inline}</style>
+</head>
+<body>
+<div class="w3-container w3-padding w3-border">
+    <div class="w3-quarter w3-container">
+        <h3 class="w3-blue" align="center">ADD DATA</h3>
+        <input type="text" id="zodiac-name" placeholder="name">
+        <input type="text" id="zodiac-img" placeholder="img">
+        <input type="text" id="zodiac-desc" placeholder="desc">
+        <button onclick="addData()" >QUAT</button></div>
+
+    <div class="w3-quarter w3-container">
+        <h3 class="w3-blue" align="center">LOAD DATA</h3>
+        <button onclick = loadData()>LOAD NE</button>
+        <button id="data-list">DATA LIST NE</button>
+    </div>
+
+    <div class="w3-container w3-quarter">
+        <h3 class="w3-blue" align="center">UPDATE DATA</h3>
+        <input type="text" id="update-id" placeholder="ID">
+        <input type="text" id="update-name" placeholder="name">
+        <input type="text" id="update-img" placeholder="img">
+        <input type="text" id="update-desc" placeholder="desc">
+        <button onclick=updateData()>QUAT</button>
+    </div>
+
+     <div class="w3-container w3-quarter">
+        <h3 class="w3-blue" align="center">DELETE DATA</h3>
+        <input type="text" id="delete-id" placeholder="ID">
+         <button onclick="deleteData()">QUAT</button>
+
+    </div>
+
+</div>
+<div class="w3-container" id="bigdiv">
+
+</div>
+
+
+<script src="../static/ajax.js"></script>
+</body>
+</html>
